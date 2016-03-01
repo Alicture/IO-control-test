@@ -34,11 +34,24 @@ public class IOcontrol
 		fop.write(byteinContent);
 		fop.flush();
 		fop.close();
+		System.out.println("是否删除文件：yes(y)or no(n)");
+		BufferedReader br3 = new BufferedReader(new InputStreamReader(System.in));
+		String choose = br3.readLine();
+		
+		if("y"==choose)
+		{
+			System.out.println("1");
+			file1.delete();
+		}
+		else if("n"==choose)
+		{
+			return;
+		}
+
+		
 		System.out.println("文件创建完成");
 		
+		
 	}
-	 
-	
-	
 
 }
